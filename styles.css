@@ -1,0 +1,532 @@
+/* https://newtodesing.com/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+
+/*Load google font*/
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+
+
+/* Reset Styles */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+a{
+	text-decoration: none;
+	text-transform: none;
+	color: #4A90E2;
+}
+
+body {
+	line-height: 1;
+	font-family: lato, ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+	text-rendering : optimizeLegibility;
+	-webkit-font-smoothing : antialiased;
+	font-size: 19px;
+	background-color: #FEFEFE;
+	color: #04143A;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+p {
+	color: #15171a;
+	font-size: 17;
+	line-height: 31px;
+}
+
+strong {
+	font-weight: 600;
+}
+
+div , footer {
+	box-sizing: border-box;
+}
+
+/* Reset ends */
+
+
+/*Hero section*/
+
+.container {
+	max-width: 1100px;
+	height: auto;
+	margin: 60px auto;
+}
+
+.hero {
+	margin: 50px auto; 
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 25px;
+}
+
+.avatar {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+	flex-shrink: 0;
+}
+
+h1.name {
+	font-size: 70px;
+	font-weight: 300;
+	display: inline-block;
+}
+
+.job-title {
+	vertical-align: top;
+	background-color: #D9E7F8;
+	color: #77b1f3;
+	font-weight: 600;
+	margin-top: 5px;
+	margin-left: 20px;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 15px 25px;
+}
+
+.email {
+	display: block;
+	font-size: 24px;
+	font-weight: 300;
+	color: #81899C;
+	margin-top: 10px;
+}
+
+.lead {
+	font-size: 44px;
+	font-weight: 300;
+	margin-top: 60px;
+	line-height: 55px;
+}
+
+/*hero ends*/
+
+/*skills & intrests*/
+
+.sections {
+	vertical-align: top;
+	display: inline-block;
+	width: 49.7%;
+	height: auto;
+	box-sizing: border-box;
+	padding-right: 10px;
+}
+
+.section-title {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+.list-card {
+	margin: 18px 0;
+	overflow: hidden;
+}
+
+.list-card .exp,
+.list-card div{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.list-card .exp {
+	margin-right: 12px;
+	color: #4A90E2;
+	font-weight: 600;
+	width: 110px;
+	text-align: left;
+}
+
+.list-card div {
+	width: calc(100% - 130px);
+	box-sizing: border-box;
+}
+
+.list-card h3 {
+	font-size: 20px;
+	font-weight: 600;
+	color: #5B6A9A;
+	line-height: 26px;
+	margin-bottom: 8px;
+}
+
+.list-card div span {
+	font-size: 16px;
+	color: #81899C;
+	line-height: 22px;
+}
+
+/*skill and intrests ends*/
+
+/* Achievements */
+
+
+.cards {
+	max-width: 1120px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin-top: 120px;
+	justify-content: space-between;
+}
+
+.card {
+	flex: 0 1 calc(50% - 10px);
+	height: auto;
+	background-color: #EEF0F7;
+	border-radius: 10px;
+	padding: 22px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	text-align: left;
+}
+
+.card-active , .card:hover{
+	transform: scale(1.02);
+	transition: 0.5s;
+	background-color: #fff;
+	box-shadow: 0px 5px 50px -8px #ddd;
+	cursor: pointer;
+}
+
+
+.skill-level {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-width: 110px;
+}
+
+.skill-level span {
+	font-size: 22px;
+	font-weight: 300;
+	color: #5B6A9A;
+}
+
+.skill-level h2 {
+	font-size: 64px;
+	font-weight: 300;
+	color: #5B6A9A;
+	margin: 0;
+	line-height: 1;
+}
+
+.skill-meta {
+	vertical-align: top;
+	display: block;
+	flex: 1 1 auto;
+	max-width: none;
+	text-align: left;
+	margin-top: 0;
+}
+
+.skill-meta h3 {
+	font-size: 20px;
+	font-weight: 800;
+	color: #5B6A9A;
+	margin-bottom: 5px;
+}
+
+.skill-meta span{
+	color: #81899C;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+/* Achievements ends */
+
+
+
+/* Timeline styles*/
+
+
+ol {
+	position: relative;
+	display: block;
+	margin: 100px 0;
+	height: 2px;
+	background: #EEF0F7;
+
+}
+ol::before,
+ol::after {
+	content: "";
+	position: absolute;
+	top: -10px;
+	display: block;
+	width: 0;
+	height: 0;
+  	border-radius: 10px;
+	border: 0px solid #31708F;
+}
+ol::before {
+	left: -5px;
+}
+ol::after {
+	right: -10px;
+	border: 0px solid transparent;
+	border-right: 0;
+	border-left: 20px solid #31708F;
+  	border-radius: 3px;
+}
+
+/* ---- Timeline elements ---- */
+li {
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 25%;
+  	height: 50px;
+}
+li .line {
+  position: absolute;
+  top: -47px;
+  left: 1%;
+  font-size: 20px;
+  font-weight: 600;
+  color: #04143A;
+}
+li .point {
+	content: "";
+	top: -7px;
+	left: 0%;
+	display: block;
+	width: 8px;
+	height: 8px;
+	border: 4px solid #fff;
+	border-radius: 10px;
+	background: #4A90E2;
+  position: absolute;
+}
+li .description {
+  display: none;
+  padding: 10px 0;
+  margin-top: 20px;
+  position: relative;
+  font-weight: normal;
+  z-index: 1;
+  max-width: 95%;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  color: #5B6A9A;
+}
+.description::before {
+  content: '';
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #f4f4f4;
+  position: absolute;
+  top: -5px;
+  left: 43%;
+}
+
+
+.timeline .date{
+	font-size: 14px;
+	color: #81899C;
+	font-weight: 300;
+}
+
+/* ---- Hover effects ---- */
+li:hover {
+  color: #48A4D2;
+}
+li .description {
+  display: block;
+}
+
+/*timeline ends*/
+
+
+
+/* Media queries*/
+
+@media(max-width: 1024px){
+	.container {
+		padding: 15px;
+		margin: 0px auto;
+	}
+	.cards {
+		margin-top: 250px;
+	}
+}
+
+@media(max-width: 768px){
+	.container {
+		padding: 15px;
+		margin: 0px auto;
+	}
+	.cards {
+		margin-top: 320px;
+	}
+
+	.card {
+		padding: 14px;
+		text-align: left;
+	}
+	.skill-level h2 {
+		font-size: 48px;
+	}
+		.card , .sections {
+		width: 100%;
+		height: auto;
+		margin: 10px 0;
+		float: left;
+	}
+
+	.timeline{
+		border: none;
+		background-color: rgba(0,0,0,0);
+	}
+
+	.timeline li{
+		margin-top: 70px;
+		height: 150px;
+	}
+}
+
+
+@media(max-width: 425px) {
+	h1.name {
+		font-size: 40px;
+	}
+
+	.card , .sections {
+		width: 100%;
+		height: auto;
+		margin: 10px 0;
+		float: left;
+	}
+
+	.skill-level h2{
+		font-size:44px;
+	}
+
+	.timeline{
+		display: none;
+		}
+
+	.job-title {
+		position: absolute;
+		font-size: 15px;
+		top: -40px;
+		right: 20px;
+		padding: 10px
+	}
+
+	.lead {
+		margin-top: 15px;
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.container {
+		margin: 0px;
+		padding: 0 15px;
+	}
+	footer {
+		margin-top: 2050px;
+	}
+	}
+
+/* 手机小屏幕：hero 纵向排列并缩小头像 */
+@media(max-width: 425px){
+	.hero{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+	}
+	.avatar{
+		width: 70px;
+		height: 70px;
+		margin-bottom: 6px;
+	}
+}
+
+
+/* End of all :P*/
+
+/* 关于我 模块 */
+.about{
+	margin: 40px auto;
+	padding: 28px 30px;
+	background: #F7F9FC;
+	border-radius: 10px;
+	text-align: center;
+}
+.about .section-title{
+	font-size: 24px;
+	margin-bottom: 12px;
+}
+.about-text{
+	color: #4a4f63;
+	font-size: 17px;
+	line-height: 1.7;
+	max-width: 900px;
+	margin: 0 auto 12px auto;
+}
+.cta{
+	margin-top: 8px;
+	font-size: 16px;
+}
+.contact-link{
+	display: inline-block;
+	margin: 0 8px;
+	padding: 8px 12px;
+	background: hsl(212, 88%, 73%);
+	color: #fff;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: 600;
+}
+.contact-link:hover{opacity:0.95}
